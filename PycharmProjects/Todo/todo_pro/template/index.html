@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Todo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class ="container">
+
+            <div class="row align-items-start" style="height:250px;border:1px #00000 solid">
+
+                <div class="bg-primary  rounded-sm p-3 w-100"><h1 class="display-1 text-center" style="color:white">TODO</h1></div>
+
+                </div>
+            </div>
+<div class = " jumbotron container center-column">
+<form  class = ""method="POST"  action = "/">
+    {% load bootstrap %}
+    {% load crispy_forms_tags %}
+    {% csrf_token %}
+    <h1>{{form.work |bootstrap }}</h1>
+<div class="form-group">
+<input  class=" form-control btn btn-primary action" type = "submit", name="Create Task">
+</form>
+</div>
+<div class="card">
+        <div class="card-header">
+          <h5>
+            <href="#collapse2" data-parent="#accordion" data-toggle="collapse">
+
+                <ul>{% for task in tasks%}</ul>
+
+
+
+			{% if task.complete == True %}
+			<strike>{{task}}</strike> <p></p>
+            {% else %}
+			<span>{{task}}</span><p></p>
+			{% endif %}
+               <a class = 'btn btn-sm btn-primary' href="{% url 'update_task' task.id %}">Update</a>
+                <a class = 'btn btn-sm btn-danger' href = "{% url 'delete' task.id %}">Delete</a>
+              <hr>
+<br>
+
+              <p></p>
+          {% endfor %}
+
+
+
+
+          </h5>
+        </div>
+
+
+</div></body>
+
+
+</div>
+</body>
+</div>
+</html>
+</div>
