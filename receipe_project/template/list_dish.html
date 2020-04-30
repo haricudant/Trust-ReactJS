@@ -1,0 +1,46 @@
+{% extends 'home.html' %}
+{% block body_block %}
+
+
+
+<body>
+<p></p>
+<div class = "container">
+ <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+ </form>
+
+      {% if dish %}
+      {% for d in dish %}
+
+<p></p>
+
+
+
+
+<div class=" card bg-primary text-white mb-3">
+            <div class="card-header ">
+                My Card
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">{{d.name}}</h4>
+                <p class="card-text">{{d.ingredient}}</p>
+                <a class="btn btn-light" href="{% url 'receipe_app:details' d.id %}"> Receipe</a>
+            </div>
+</div>
+<p></p>
+ {% endfor %}
+
+{% else %}
+<h3> No Dishes Registered</h3>
+{% endif %}
+
+{% endblock %}
+    </div>
+
+  <!-- Modal -->
+
+
+</body>
+</html>

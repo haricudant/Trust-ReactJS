@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+{% extends "home.html" %}
+{% block body_block %}
+
+ <div class="row align-items-start" style="height:250px;border:1px #00000 solid">
+     <div class="bg-primary  rounded-sm p-3 w-100"><h1 class="display-1 text-center" style="color:white">Post your receipe</h1></div>
+
+                </div>
+
+<div class = " jumbotron container form-group " >
+
+{% load crispy_forms_tags %}
+<form  action="" method="post" style="margin-top: 1.3em";>
+  <table>
+      {% csrf_token %}
+    {{ form |crispy }}
+  </table>
+<input type='submit' value="submit" class="btn btn-primary">
+</form>
+</div>
+
+</body>
+{% endblock %}

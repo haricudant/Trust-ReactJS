@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% extends "home.html" %}
+{% block body_block %}
+
+<div class = "container text-center">
+<h1 class="display-1">
+{{dish.name}}</h1>
+    </div>
+    <br>
+<div class = "jumbotron container">
+    <h5 class = "lead"><mark>Ingredients:</mark>
+<td> {{dish.ingredient}} </td>
+    <br>
+<h1 class = "display-4  "><u> Procedure:</u><br></br>
+    <div class = "jumbotron">
+<td>{{dish.procedure}}</td>
+    <br></h1></div>
+<p class="text-muted text-center">
+Created at:
+<td> {{dish.created_at}}</td>
+    <br>
+</p>
+<!--<td>{{dish.image}}</td>-->
+
+</div>
+<div class = "  container">
+<form action="" method="post">
+    {% for commnet in commentform %}
+    {% load crispy_forms_tags %}
+    {% csrf_token %}
+
+    {{commentform | crispy}}
+    {% endfor %}
+
+<button class = "btn btn-success">Post</button>
+</form>
+<br>
+
+<blockquote >
+    <h4>Comments:</h4>
+    <h6>{{comment.count}} Comment {{Comments |pluralize}}</h6>
+
+    <hr>
+    {% for c in comment %}
+  <p class="mb-0">{{c.body}}</p>
+  <footer class="blockquote-footer">by <cite title="Source Title">{{user.username}}</cite></footer>
+</blockquote>
+
+
+
+
+
+
+
+<br>
+{% endfor %}
+
+</div>
+</html>
+
+
+
+{% endblock %}
