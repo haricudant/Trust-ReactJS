@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from receipe_app.views import index, home
+from receipe_app.views import index, home ,register, user_login,logoutUser
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
+    path('register/', register, name="register"),
+    path('login/', user_login, name="login"),
+    path('logout/', logoutUser, name="logout"),
     path("", include('receipe_app.urls')),
 
 

@@ -1,4 +1,4 @@
-from . models import Dish, Comment
+from . models import Dish, Comment, UserProfileInfo
 from django import forms
 from django.core import validators
 from django.contrib.auth.forms import UserCreationForm
@@ -17,16 +17,7 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ['body']
 
-
-
-class UserRegisterForm(UserCreationForm):
-    email = forms.EmailField()
-    phone_no = forms.CharField(max_length = 20)
-    first_name = forms.CharField(max_length = 20)
-    last_name = forms.CharField(max_length = 20)
-
+class CreateUserForm(UserCreationForm):
     class Meta:
         model = User
-        fields = ['username', 'email', 'phone_no', 'password1', 'password2']
-
-
+        fields = ['username', 'email', 'password1', 'password2']

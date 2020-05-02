@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<head>
+
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+    <head>
 <body>
 
 <div class = "container">
@@ -16,18 +20,19 @@
        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" width="30" height="30" alt="">
 
        <a class="navbar-link text-white" href="{% url 'receipe_app:home' %}">Home <span class="sr-only">(current)</span></a>
-
-      <a class="nav-link text-white" href="{% url 'receipe_app:index' %}">Receipe <span class="sr-only">(current)</span></a>
+       <a class="nav-link text-white" href="{% url 'receipe_app:index' %}">Receipe <span class="sr-only">(current)</span></a>
        <a class="nav-link text-white" href="{% url 'receipe_app:list' %}">List <span class="sr-only">(current)</span></a>
 
-         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+
        {% if user.is_authenticated %}
-            <li><a href="{% url "receipe_app:logout" %}"><span class="glyphicon glyphicon-log-out"></span> &nbsp; Logout</a></li>
-            {% else %}
-            <li><a href="{% url "receipe_app:register" %}"><span class="glyphicon glyphicon-user"></span> &nbsp; Sign up</a></li>
-            <li><a href="{% url "receipe_app:login" %}"><span class="glyphicon glyphicon-log-in"></span> &nbsp; Log in</a></li>
-            {% endif %}
-      </div>
+            <a class="nav-link text-white" href="{% url 'logout'%}">Logout</a>
+        {% else %}
+            <a class="nav-link text-white"  href="{% url 'register' %}">Sign up</a>
+            <a  class="nav-link text-white" href="{% url 'login' %}"> Log in</a>
+        {% endif %}
+      <a  class = "nav-link text-white"> Welcome <i>{{user.username}}</i></a>
+
+
   </a>
 </nav>
      </div>
@@ -35,6 +40,7 @@
 <p></p>
 <p></p>
 </body>
+
 {% block body_block %}
 {% endblock %}
 </div></div>
@@ -71,3 +77,9 @@
 
 
 
+<style>
+html {
+  font-family: "myFont", "Bitstream Vera Serif", serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+</style>

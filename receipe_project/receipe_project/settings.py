@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'crispy_forms',
 ]
 
-
+LOGIN_REDIRECT_URL = 'home'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
