@@ -1,8 +1,12 @@
 from rest_framework.views import APIView
 from rest_framework.views import Response
+from rest_framework.authentication import TokenAuthentication
 from profiles_api import serializers
-from rest_framework import status
+from rest_framework import status, filters
 from rest_framework import viewsets
+from profiles_api import models, permissions
+from rest_framework.authtoken.views import ObtainAuthToken
+from rest_framework.settings import api_settings 
 
 
 class HelloAPIView(APIView):
@@ -90,3 +94,18 @@ class HelloViewset(viewsets.ViewSet):
     def destroy(self, request, pk=None):
         """ Deletes an object """
         return Response({'http_method': 'DELETE'})
+
+
+class UserProfileViewset(viewsets.ModelViewSet):
+    """ Handle creating, creating   and updating profiles"""
+    """ User profile viewset that Handles creating, Updating profiles """
+    serializer_class = serializers.UserProfileSerializer
+    queryset = models.UserProfile.objects.all()
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (permissions.UpdateOwnprofile,)
+    filter_backends = (filters.SearchFilter,) 
+    search_fields = ('name','email',)
+
+class UserLoginApiView(ObtainAuthToken):
+   """Handle creating user authentication tokens"""
+   renderer_classes = api_settings.DEFAULT_RENDERER_CLASSES
