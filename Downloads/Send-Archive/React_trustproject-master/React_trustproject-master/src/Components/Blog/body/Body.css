@@ -1,0 +1,39 @@
+ .hide {
+     display: none;
+}
+
+#para{
+
+    font-size:20px;
+    color:#707070;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.three {
+    background: linear-gradient(#ffffff 0%, #ffffff 49%, #000000 50%, #000000 51%, #ffffff 52%, #ffffff 100%);
+  }
+  
+  .three span {
+    background: #fff;
+    padding: 0 20px;
+    position: relative;
+    z-index: 5;
+  }
+
+
+
+@media all and (max-width: 699px) and (min-width: 520px), (min-width: 1151px),(min-width: 320px)  {
+ .sidepic {
+   width: 100%;
+    
+  }
+}
+
+#head{
+
+    font-size:20px;
+    font-weight: bold;
+    color: #1A1A1A;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+}

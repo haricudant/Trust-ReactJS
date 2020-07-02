@@ -1,0 +1,23 @@
+.follow {
+  font-size: 40px;
+  font-family: "Lato";
+  font-weight: bold;
+   margin-right: 20px; 
+}
+
+.content {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.buttn {
+  padding: 5px 30px;
+  background-color: #1464f6 !important;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 1mm;
+  border-width: inherit;
+  font-size: 18px;
+  color: #ffffff;
+}

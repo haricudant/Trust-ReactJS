@@ -1,0 +1,64 @@
+.jumbotronBG {
+  background-image: url("../../../img/showcase.jpg");
+  height: 750px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  box-shadow: inset 0 0 0 1000px rgba(7, 2, 2, 0.4);
+  margin-bottom: 0rem !important;
+}
+
+.contentCenter {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+.text-light {
+  color: whitesmoke !important;
+}
+.pare {
+  padding: 5% 30% 2% 30%;
+}
+.new1 {
+  border-top: 1px solid rgb(207, 196, 196);
+}
+.display-4d {
+  font-size: 11vw;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .display-4d {
+    font-size: 10vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .display-4d {
+    font-size: 4vw;
+  }
+}
+
+.caption {
+  font-size: 40px;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.subcaption {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.undercaption {
+  font-size: 40px;
+  font-family: "Lato", sans-serif;
+  font-style: bold;
+  text-align: right;
+}

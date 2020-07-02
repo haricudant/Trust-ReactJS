@@ -1,0 +1,33 @@
+li {
+  list-style: none;
+}
+
+.donate_us {
+  font-size: 40px;
+  font-family: "Lato";
+}
+
+.subtext {
+  font-size: 17px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: lighter;
+  color: #606060;
+}
+
+.text_title {
+  font-size: 17px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #606060;
+  font-weight: bold;
+}
+.text {
+  font-size: 17px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #606060;
+  font-weight: regular;
+}
+
+.fa-gift {
+  margin-right: 10px;
+  color: #ee0606
+}

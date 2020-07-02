@@ -1,0 +1,17 @@
+.transitionAnim {
+	transition: 1s;
+	transition-timing-function: linear;
+	-webkit-box-shadow: 0px 9px 22px 1px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 9px 22px 1px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 22px 1px rgba(0, 0, 0, 0.75);
+}
+
+/* this css is used to fix the bootstrap colums poping upon the navbar, the main guy who does the role is z index */
+.navbarBugFix {
+	position: fixed !important;
+	width: 100%;
+	top: 0;
+
+	z-index: 1;
+}
+

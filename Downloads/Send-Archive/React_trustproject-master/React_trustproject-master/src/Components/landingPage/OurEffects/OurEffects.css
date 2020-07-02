@@ -1,0 +1,30 @@
+.shadow {
+	-webkit-box-shadow: -1px 2px 25px 8px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: -1px 2px 25px 8px rgba(0, 0, 0, 0.75);
+	box-shadow: -1px 2px 25px 8px rgba(0, 0, 0, 0.75);
+}
+.slick-prev:before,
+.slick-next:before {
+	color: #09529b !important;
+}
+
+.our_efforts{
+	font-size: 40px;
+	font-family: "Lato";
+}
+
+
+.sub_title{
+
+	font-style: "Source Sans Pro", sans-serif;
+	font-weight: regular;
+	font-size: 14px;
+}
+
+.btn_text{
+	font-style: "Helvetica Neue";
+	font-size: 14px;
+	background-color: 0d47a1;
+}
+
+

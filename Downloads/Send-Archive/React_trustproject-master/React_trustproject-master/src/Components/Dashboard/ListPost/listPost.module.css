@@ -1,0 +1,19 @@
+td a {
+  cursor: pointer;
+      display: inline-block;
+      margin-right: 10;
+  min-width: 24px;
+  }  
+
+  i {
+    font-size: 13px;
+    margin-right: 10;
+    cursor: pointer;
+}
+
+td a.edit {
+        color: #FFC107;
+    }
+td a.delete {
+        color: #E34724;
+    }

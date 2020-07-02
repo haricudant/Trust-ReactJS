@@ -1,0 +1,47 @@
+.head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 300px;
+}
+
+.about_us {
+  font-family: "Lato";
+  font-size: 40px;
+  font-style: bold;
+}
+.about_us_para {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+.about_us_content {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #001c78;
+  text-transform: uppercase;
+}
+
+.fa-fingerprint {
+  margin-right: 10px;
+  font-size: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../../img/thumb.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 300px;
+  }
+}
